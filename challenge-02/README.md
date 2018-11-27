@@ -23,15 +23,15 @@ Crie uma função que adicione um valor à variável criada acima, e retorne a s
 Onde VALOR é o novo valor da variável.
 */
 function valor(){
-    nova = 'VALOR';
-    return 'O valor da variável agora é VALOR';
+    nova = 66;
+    return 'O valor da variável agora é ' + nova;
 }
 
 // Invoque a função criada acima.
-valor()
+valor();
 
 // Qual o retorno da função? (Use comentários de bloco).
-// O valor da variável agora é VALOR
+/* O valor da variável agora é 66 */
 
 /*
 Crie uma função com as seguintes características:
@@ -41,7 +41,7 @@ Crie uma função com as seguintes características:
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
 function argumentos(x,y,z){
-    if (x == null || y == null || z == null){
+    if (x == undefined || y == undefined || z == undefined){
         return 'Preencha todos os valores corretamente!';
     } else{
         return x * y * z + 2;
@@ -58,7 +58,7 @@ argumentos(1,2);
 argumentos(2,5,7);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-// Valor retornado
+// Valor retornado 72
 72
 
 /*
@@ -76,9 +76,11 @@ function argumentosNovos(a,b,c){
     } else if (a != null && b != null && c == null){
         return a + b;
     } else if (a != null && b != null && c != null){
-        return a + b / c;
+        return (a + b) / c;
+    } else if (a == null && b == null && c == null){
+        return false;
     } else {
-        return 'null';
+        return null;
     }
 }
 
